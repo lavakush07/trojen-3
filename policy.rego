@@ -4,6 +4,8 @@ package scs.package_protection
 # All entries must be consolidated here.
 denylist := {
 
+## testing it
+
 [
 {"name": {"value": "02-echo", "operator": "=="}, "version": {"value": "0.0.7", "operator": "=="}},
 {"name": {"value": "@accordproject/concerto-analysis", "operator": "=="}, "version": {"value": "3.24.1", "operator": "=="}},
