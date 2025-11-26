@@ -1,0 +1,13 @@
+{
+  "name": "voiceflow-backend-utils-demo",
+  "version": "1.0.0",
+  "description": "Sample repo demonstrating @voiceflow/backend-utils usage.",
+  "main": "app.js",
+  "private": true,
+  "dependencies": {
+    "@voiceflow/backend-utils": "5.0.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
