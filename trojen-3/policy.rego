@@ -3,7 +3,7 @@ package scs.package_protection
 # Denylist of malicious or compromised NPM packages.
 # All entries must be consolidated here.
 
-# Testing it....
+
 denylist := {
 
 [
