@@ -1302,3 +1302,5 @@ fill_default_deny_rules(obj) := list if {
 		"purl": {"value": null, "operator": null},
 	}
 	list := [x | x := object.union(defaults, obj[_])]
+
+	}
