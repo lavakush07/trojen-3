@@ -7,34 +7,15 @@ import future.keywords.in
 # All entries must be consolidated here.
 #editing
 
-denylist := {
-[
-{"name": {"value": "02-echo", "operator": "=="}, "version": {"value": "0.0.7", "operator": "=="}},
-{"name": {"value": "@accordproject/concerto-analysis", "operator": "=="}, "version": {"value": "3.24.1", "operator": "=="}},
-{"name": {"value": "@accordproject/concerto-linter", "operator": "=="}, "version": {"value": "3.24.1", "operator": "=="}},
-{"name": {"value": "@accordproject/concerto-linter-default-ruleset", "operator": "=="}, "version": {"value": "3.24.1", "operator": "=="}},
-{"name": {"value": "@accordproject/concerto-metamodel", "operator": "=="}, "version": {"value": "3.12.5", "operator": "=="}},
-{"name": {"value": "@accordproject/concerto-types", "operator": "=="}, "version": {"value": "3.24.1", "operator": "=="}},
-{"name": {"value": "@accordproject/markdown-it-cicero", "operator": "=="}, "version": {"value": "0.16.26", "operator": "=="}},
-{"name": {"value": "@accordproject/template-engine", "operator": "=="}, "version": {"value": "2.7.2", "operator": "=="}},
-{"name": {"value": "@actbase/css-to-react-native-transform", "operator": "=="}, "version": {"value": "1.0.3", "operator": "=="}},
-{"name": {"value": "@actbase/native", "operator": "=="}, "version": {"value": "0.1.32", "operator": "=="}},
-{"name": {"value": "@actbase/node-server", "operator": "=="}, "version": {"value": "1.1.19", "operator": "=="}},
-{"name": {"value": "@actbase/react-absolute", "operator": "=="}, "version": {"value": "0.8.3", "operator": "=="}},
-{"name": {"value": "@actbase/react-daum-postcode", "operator": "=="}, "version": {"value": "1.0.5", "operator": "=="}},
-{"name": {"value": "@actbase/react-kakaosdk", "operator": "=="}, "version": {"value": "0.9.27", "operator": "=="}},
-{"name": {"value": "@actbase/react-native-actionsheet", "operator": "=="}, "version": {"value": "1.0.3", "operator": "=="}},
-{"name": {"value": "@actbase/react-native-devtools", "operator": "=="}, "version": {"value": "0.1.3", "operator": "=="}},
 
-]
-}
-
-#### DEFINE YOUR ALLOW RULES BELOW ####
-allow_list := {
-	"licenses": [],
-	"purls": [],
-	"suppliers": [],
-}
+#### DEFINE YOUR DENY RULES BELOW ####
+deny_list := fill_default_deny_rules([
+	{
+		"name": {"value": "zlib", "operator": "=="},
+		"version": {"value": "1.2.13", "operator": "<="},
+	},
+  {"license": {"value": "BSD-2-Clause", "operator": "=="}},
+])
 
 #### DO NOT CHANGE THE FOLLOWING SCRIPT ####
 
