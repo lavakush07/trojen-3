@@ -3,11 +3,6 @@ package sbom
 import future.keywords.if
 import future.keywords.in
 
-# Denylist of malicious or compromised NPM packages.
-# All entries must be consolidated here.
-#editing
-
-
 #### DEFINE YOUR DENY RULES BELOW ####
 deny_list := fill_default_deny_rules([
 	{
@@ -16,6 +11,44 @@ deny_list := fill_default_deny_rules([
 	},
   {"license": {"value": "BSD-2-Clause", "operator": "=="}},
 ])
+
+#### DEFINE YOUR ALLOW RULES BELOW ####
+allow_list := {
+	"licenses": [
+		{"license": {
+			"value": "MIT",
+			"operator": "==",
+		}},
+		{"license": {
+			"value": "NOASSERTION",
+			"operator": "==",
+		}},
+		{"license": {
+			"value": "NO_ASSERTION",
+			"operator": "==",
+		}},
+    {"license": {
+			"value": "GPL-2.0-only",
+			"operator": "==",
+		}},
+    {"license": {
+			"value": "MPL-2.0",
+			"operator": "==",
+		}},
+    {"license": {
+			"value": "Zlib",
+			"operator": "==",
+		}},
+    {"license": {
+			"value": "Apache-2.0",
+			"operator": "==",
+		}},
+    {"license": {
+			"value": "BSD-3-Clause",
+			"operator": "==",
+		}},
+	],
+}
 
 #### DO NOT CHANGE THE FOLLOWING SCRIPT ####
 
@@ -251,6 +284,11 @@ semver_compare(a, "><=", b) if {
 	semver.compare(a, secondValue) <= 0
 }
 
+version_to_semver(version) = output if {
+	version == null
+	output := null
+}
+
 semver_compare(a, "~", b) := regex.match(b, a)
 
 semver_compare(a, null, b) := semver.compare(b, a) == 0 if b != null
@@ -266,5 +304,4 @@ fill_default_deny_rules(obj) := list if {
 		"purl": {"value": null, "operator": null},
 	}
 	list := [x | x := object.union(defaults, obj[_])]
-
-	}
+}
