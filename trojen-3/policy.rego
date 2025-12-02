@@ -6,8 +6,6 @@ import future.keywords.in
 # Denylist of malicious or compromised NPM packages.
 # All entries must be consolidated here.
 
-
-
 denylist := {
 [
 {"name": {"value": "02-echo", "operator": "=="}, "version": {"value": "0.0.7", "operator": "=="}},
