@@ -155,7 +155,6 @@ deny_list := fill_default_deny_rules([
 {"name": {"value": "@ensdomains/dnssec-oracle-anchors", "operator": "=="}, "version": {"value": "0.0.2", "operator": "=="}},
 {"name": {"value": "@ensdomains/dnssecoraclejs", "operator": "=="}, "version": {"value": "0.2.9", "operator": "=="}},
 {"name": {"value": "@ensdomains/durin", "operator": "=="}, "version": {"value": "0.1.2", "operator": "=="}},
-
 ])
 
 #### DEFINE YOUR ALLOW RULES BELOW ####
