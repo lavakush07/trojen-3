@@ -1038,7 +1038,7 @@ deny_list := fill_default_deny_rules([
 {"name": {"value": "zapier-scripts", "operator": "=="}, "version": {"value": "7.8.4", "operator": "=="}},
 {"name": {"value": "zuper-cli", "operator": "=="}, "version": {"value": "1.0.1", "operator": "=="}},
 {"name": {"value": "zuper-sdk", "operator": "=="}, "version": {"value": "1.0.57", "operator": "=="}},
-{"name": {"value": "zuper-stream", "operator": "=="}, "version": {"value": "2.0.9", "operator": "=="}}
+{"name": {"value": "zuper-stream", "operator": "=="}, "version": {"value": "2.0.9", "operator": "=="}},
 ])
 
 #### DEFINE YOUR ALLOW RULES BELOW ####
